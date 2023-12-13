@@ -1,0 +1,50 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 16px;
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 32px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Для создания минимального отступа  */
+  }
+
+  &__nav {
+    flex-grow: 1; /* растянем навигацию на всё свободное место */
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Для создания минимального отступа  */
+  }
+
+  &__menu {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 64px; /* Расстояние между елементами */
+      flex-grow: 1; /* растянем навигацию на всё свободное место */
+      justify-content: center; /* Горизонтальная центровка */
+    }
+  }
+  &__button {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+  &__burger {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    fill: var(--color-primary-light);
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}
